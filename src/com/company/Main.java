@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
 
 //1. Надо создать класс Alumne (ученик) который хранит фамилию и курс(1 или 2). И он должен быть Comparable.
 //2. Создать класс AlumneS (ученики) который позволяет сохранять Alumne, нельзя использовать Java Collections Framework.
@@ -14,24 +13,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Alumne[] alumnes = {
-               new Alumne("Kolosova", 2),
-               new Alumne("Ivanov", 1),
-               new Alumne("Petrova", 1),
-               new Alumne("Kozlov",2),
-               new Alumne("Gudok",2)
-       };
-
-        Arrays.sort(alumnes);
-
-        for (int i=0; i < 5; i++){
-            System.out.println(alumnes[i]);
-        }
-
-       // System.out.println(Arrays.asList(alumnes));
+        Alumne.MassivOne(); //выводим отсортированный массив
+        System.out.println("-----------------------------");
 
 
-
+        Alumnes.alumIter(); // массив НАДО отсортировать, и вывести ТОЛЬКО учеников 2го курса.
     }
 
 }
